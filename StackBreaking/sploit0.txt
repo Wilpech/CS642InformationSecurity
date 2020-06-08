@@ -1,0 +1,1 @@
+The basic idea is the to create a parallel buffer and then overwrite what would be an F, into an A. This follows the same suit as all of my other exploits but its creating a parallel buffer of NOPs, overflowing the buffer and printing the string "A" instead of F. That is it.

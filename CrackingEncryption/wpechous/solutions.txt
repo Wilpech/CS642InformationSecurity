@@ -1,0 +1,35 @@
+# Part A:
+
+## Recovered password
+11235813
+
+## Pseudocode for attack
+The basic idea for my code is to try passwords until you get a hit. We start out with all zeros and proceed, one number added and changed at a time sequentially until the password is found. Basically creating a potential hash with the inputs we are given, i.e. Bucky and the salt and then compares it to the hash we are given. If there is a match, we print it and exit the loop and then we are done.
+
+Pseudocode:
+for (pass til we have the password "my placeholder was something like 1000000000000")
+ if(hashlib.sha256("bucky," +pass+ ",20200128") ==  61ef437ca1493baf5ce815a8ca13ec1fba31645f7d85edebac7c60e0aa98b5c):
+   print pass and exit the loop
+ else
+   continue until you get it :(
+
+## Worst case running time
+My code's worst case running time would be O(N). N being the actual password. It takes quite some time to be honest but brute forcing it this way does work haha!
+
+## Discussion merits of current proposal
+The good part of my colleagues proposal is it is easy to do. The hashing doesn't take much time to compute and having a specific and random salt makes it much harder to brute force it without that. Overall, it has its merits but once that information is gained and enough is known about the system, it can be broken in a reasonable amount of time and since all of it is only hashed once with sha256 it makes it even easier to break.
+
+## Suggestions for improvement
+The salt is the main weakpoint of this proposal. Since we have the salt, it is much easier to identify the actual password since all you need to do is hash and find a match. One easy way to fix this would be to develop your key based on the user and their given password so that my method of breaking it would be much harder to do and would take way longer.
+
+# Part B:
+
+## Discussion of the current scheme
+So the current scheme is rather week. It generates a random key based on os.urandom and grabs the message from standard input. It then reades in the message and converts its contents to hex values. It hten creates a cipher using AES and our random IV and then tags the message at the end and send out the message with the IV at the front and the ciphertext following with a tag at the end to indicate. The decryption is basically taking in this value and decoding the text we have been sent. Pulling it piece by piece from the command args and then separating the tag as well as the IV. It also checks if the CT is too short by checking where the tag is located. It then checks if the tag has been tampered with and then prints the message if it hasn't been.
+
+## Suggestions for improving the scheme
+I think the biggest improvement for this would be to enrypt-then-MAC. As the current scheme goes we encrypt-and-MAC meaning that we generate the CT and then base the MAC off of that. Since they are related it is easier to crack. If we were to encrypt-then-MAC we would provide integrity to the CT and assuming we don't know there is a MAC this will ensure we only read valid messages that haven't been tampered with.
+
+
+# Extra Credit: NO TIME TO DO IT UNFORTUNATELY, WISH I COULD HAVE
+

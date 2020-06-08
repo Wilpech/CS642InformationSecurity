@@ -1,0 +1,6 @@
+The exploit is the fact that there is no check after the program copies over a string argument into snprintf() and added to the buffer. I exploited this function so that it overwrites the memory similary to how we have done in the past. The rest is super technical but that is really it, that is the high level idea here.
+
+The change here is that we are going to input the attack in string format so it looks something like:
+ address of EIP, stackpop, shellcode
+
+Here again, I didn't finish it at all. I have the barebones pieces for it but I am missing arguably the most important parts which is the addresses. I am not great with this math, and I am doing this on my own. I know that the first should be the address of the EIp and the second should be the stackpop address and some change. I have all of the core functionality there though. So I just put in some question marks but I just can't figure it out.
